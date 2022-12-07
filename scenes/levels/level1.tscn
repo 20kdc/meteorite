@@ -300,6 +300,41 @@ light_specular = 0.0
 omni_range = 5.45783
 omni_attenuation = 1.46409
 
+[node name="fill5" type="OmniLight" parent="stagehands/stage1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.3794, -2.1669, 5.03746 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+omni_attenuation = 1.46409
+
+[node name="fill6" type="OmniLight" parent="stagehands/stage1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.3794, -2.1669, 1.88854 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+omni_attenuation = 1.46409
+
+[node name="fill7" type="OmniLight" parent="stagehands/stage1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.3794, -2.1669, 3.24718 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+omni_attenuation = 1.46409
+
+[node name="fill8" type="OmniLight" parent="stagehands/stage1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7951, -7.02023, 11.2957 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+omni_attenuation = 1.46409
+
+[node name="fill9" type="OmniLight" parent="stagehands/stage1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.1436, -7.02023, 9.4928 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+omni_attenuation = 1.46409
+
 [node name="fill2" type="OmniLight" parent="stagehands/stage1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6365, -2.75462, -8.98389 )
 light_energy = 2.0
@@ -313,6 +348,177 @@ light_energy = 2.0
 light_specular = 0.0
 omni_range = 6.05546
 omni_attenuation = 1.46409
+
+[node name="stage1p1" type="Node" parent="stagehands"]
+
+[node name="corridorAround" type="OmniLight" parent="stagehands/stage1p1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.9529, -10.8998, 16.3703 )
+light_specular = 0.0
+omni_range = 6.05546
+omni_attenuation = 0.37893
+
+[node name="fill10" type="OmniLight" parent="stagehands/stage1p1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.3741, -8.93229, 19.5053 )
+light_specular = 0.0
+omni_range = 20.0
+omni_attenuation = 1.46409
+
+[node name="fill11" type="OmniLight" parent="stagehands/stage1p1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.3741, -8.93229, 25.5206 )
+light_specular = 0.0
+omni_range = 20.0
+omni_attenuation = 1.46409
+
+[node name="return1" type="OmniLight" parent="stagehands/stage1p1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.0108, -10.6381, 21.2091 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+omni_attenuation = 1.46409
+
+[node name="return2" type="OmniLight" parent="stagehands/stage1p1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0271, -11.8047, 21.2091 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+omni_attenuation = 1.46409
+
+[node name="return3" type="OmniLight" parent="stagehands/stage1p1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.03966, -12.9437, 20.1076 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+omni_attenuation = 1.46409
+
+[node name="continue" type="OmniLight" parent="stagehands/stage1p1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32.5925, -8.93229, 19.5053 )
+light_energy = 0.25
+light_specular = 0.0
+omni_range = 20.0
+omni_attenuation = 1.46409
+
+[node name="continue2" type="OmniLight" parent="stagehands/stage1p1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32.5925, -8.93229, 25.5206 )
+light_energy = 0.25
+light_specular = 0.0
+omni_range = 20.0
+omni_attenuation = 1.46409
+
+[node name="stage2" type="Node" parent="stagehands"]
+
+[node name="general6" type="OmniLight" parent="stagehands/stage2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2058, 3.12476, 17.878 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 16.0
+
+[node name="general7" type="OmniLight" parent="stagehands/stage2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1808, 7.59071, -0.186832 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="general8" type="OmniLight" parent="stagehands/stage2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1808, 7.59071, 5.68228 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="general9" type="OmniLight" parent="stagehands/stage2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7017, 4.76661, 15.5764 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="general10" type="OmniLight" parent="stagehands/stage2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.1543, 7.86425, -10.9737 )
+light_energy = 2.0
+light_specular = 0.0
+
+[node name="pressurecooker" type="OmniLight" parent="stagehands/stage2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.1146, -5.57046, -3.94175 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="stage3" type="Node" parent="stagehands"]
+
+[node name="general" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7398, 2.83298, 15.1375 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="general2" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8032, 5.12728, 25.8193 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 11.0
+
+[node name="jumpPitFocus" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3878, 7.34354, 26.0902 )
+light_energy = 2.0
+light_specular = 0.0
+
+[node name="jumpPitFocus2" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3878, 7.34354, 23.1416 )
+light_energy = 0.5
+light_specular = 0.0
+
+[node name="general3" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.9751, 2.81748, 25.8193 )
+light_energy = 2.0
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="general4" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.9751, 7.27805, 28.3062 )
+light_energy = 2.0
+light_specular = 0.0
+
+[node name="pkL" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50.3081, 7.11124, 25.9678 )
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="ladder" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -57.0223, 7.11124, 26.4459 )
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="ladder2" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -57.0223, 11.2294, 27.6735 )
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="pkBounce" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50.0888, 1.09078, 29.9832 )
+light_energy = 0.25
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="pkBounce2" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.6376, 1.09078, 29.9832 )
+light_energy = 0.25
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="pkBounce3" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.6376, 1.09078, 22.8603 )
+light_energy = 0.25
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="pkBounce4" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50.0704, 1.09078, 22.8603 )
+light_energy = 0.25
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="pkH" type="OmniLight" parent="stagehands/stage3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -53.6438, 9.78216, 25.9678 )
+light_specular = 0.0
+omni_range = 10.0
 
 [node name="level1" parent="." instance=ExtResource( 1 )]
 
@@ -353,9 +559,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19, -9, 18 )
 [node name="door_small4" parent="doors" instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -25.5, -7, -1 )
 
-[node name="door_small_boss" parent="doors" groups=[
-"boss_door",
-] instance=ExtResource( 5 )]
+[node name="door_small_boss" parent="doors" groups=["boss_door"] instance=ExtResource( 5 )]
 transform = Transform( -3.25841e-07, 0, 2, 0, 2, 0, -2, 0, -3.25841e-07, -49.5, -1, -18 )
 bullet_color = 2
 
@@ -432,9 +636,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 6, -11 )
 [node name="save_station3" parent="save_stations" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -2, -9 )
 
-[node name="save_station_boss" parent="save_stations" groups=[
-"save_station_boss",
-] instance=ExtResource( 8 )]
+[node name="save_station_boss" parent="save_stations" groups=["save_station_boss"] instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 1.5, -18 )
 
 [node name="enemies" type="Node" parent="."]
@@ -494,9 +696,7 @@ bounds = Vector3( 13, 3.5, 4 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -62, -6.25, -18 )
 bounds = Vector3( 24, 1.5, 24 )
 
-[node name="ufo" parent="environmental" groups=[
-"ufo",
-] instance_placeholder="res://scenes/environmental/ufo.tscn"]
+[node name="ufo" parent="environmental" groups=["ufo"] instance_placeholder="res://scenes/environmental/ufo.tscn"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5, 9.5, -0.5 )
 
 [node name="boss" type="Node" parent="."]
