@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://scripts/boss/boss.gd" type="Script" id=1]
 [ext_resource path="res://scenes/fsm/fsm.tscn" type="PackedScene" id=2]
@@ -31,7 +31,22 @@ detail_enabled = true
 detail_blend_mode = 0
 detail_uv_layer = 0
 detail_albedo = ExtResource( 10 )
-uv1_scale = Vector3( 20, 20, 20 )
+uv1_scale = Vector3( 50, 50, 50 )
+
+[sub_resource type="Animation" id=30]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("laser/hit_effect/Particles:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "dying"
@@ -112,6 +127,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("laser/hit_effect/Particles:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=6]
 resource_name = "laser_start"
@@ -159,6 +186,18 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("laser/hit_effect/Particles:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
 "times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
@@ -213,6 +252,8 @@ tracks/0/keys = {
 [sub_resource type="CanvasItemMaterial" id=10]
 resource_local_to_scene = true
 
+[sub_resource type="BitmapFont" id=13]
+
 [sub_resource type="StyleBoxFlat" id=11]
 resource_local_to_scene = true
 bg_color = Color( 0.721943, 0.161362, 0.878906, 1 )
@@ -223,8 +264,6 @@ border_blend = true
 [sub_resource type="StyleBoxFlat" id=12]
 resource_local_to_scene = true
 bg_color = Color( 0.398438, 0.398438, 0.398438, 1 )
-
-[sub_resource type="BitmapFont" id=13]
 
 [sub_resource type="CylinderMesh" id=14]
 resource_local_to_scene = true
@@ -245,27 +284,6 @@ flags_unshaded = true
 params_blend_mode = 1
 albedo_color = Color( 2, 1.2, 1.8, 1 )
 
-[sub_resource type="Gradient" id=27]
-colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
-
-[sub_resource type="GradientTexture" id=28]
-gradient = SubResource( 27 )
-
-[sub_resource type="Curve" id=29]
-_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.0137125, 0.972656 ), 0.0, 0.0, 0, 0, Vector2( 0.98801, 0 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=30]
-curve = SubResource( 29 )
-
-[sub_resource type="ParticlesMaterial" id=31]
-flag_align_y = true
-spread = 180.0
-initial_velocity = 7.0
-initial_velocity_random = 0.5
-scale = 0.5
-scale_curve = SubResource( 30 )
-color_ramp = SubResource( 28 )
-
 [sub_resource type="SpatialMaterial" id=23]
 flags_unshaded = true
 vertex_color_use_as_albedo = true
@@ -276,6 +294,12 @@ albedo_texture = ExtResource( 12 )
 [sub_resource type="QuadMesh" id=24]
 material = SubResource( 23 )
 size = Vector2( 0.2, 1 )
+
+[sub_resource type="Curve" id=29]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.0137125, 0.972656 ), 0.0, 0.0, 0, 0, Vector2( 0.98801, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=27]
+colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
 
 [sub_resource type="QuadMesh" id=25]
 size = Vector2( 2.688, 2.688 )
@@ -288,9 +312,7 @@ params_cull_mode = 2
 albedo_color = Color( 2.1, 1.5, 2.4, 1 )
 albedo_texture = ExtResource( 12 )
 
-[node name="boss" type="StaticBody" groups=[
-"boss",
-]]
+[node name="boss" type="StaticBody" groups=["boss"]]
 collision_mask = 3
 script = ExtResource( 1 )
 
@@ -358,6 +380,7 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
 [node name="animation" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 30 )
 anims/dying = SubResource( 4 )
 anims/laser_end = SubResource( 5 )
 anims/laser_start = SubResource( 6 )
@@ -366,8 +389,9 @@ anims/tumor_end = SubResource( 8 )
 anims/tumor_start = SubResource( 9 )
 
 [node name="raycast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5 )
 cast_to = Vector3( 0, 0, -100 )
-collision_mask = 2
+collision_mask = 3
 
 [node name="ui" type="CanvasLayer" parent="."]
 
@@ -381,9 +405,9 @@ margin_left = 8.0
 margin_top = 58.0
 margin_right = 56.0
 margin_bottom = 59.0
+custom_fonts/font = SubResource( 13 )
 custom_styles/fg = SubResource( 11 )
 custom_styles/bg = SubResource( 12 )
-custom_fonts/font = SubResource( 13 )
 max_value = 200.0
 step = 1.0
 value = 24.0
@@ -399,6 +423,7 @@ __meta__ = {
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, -8 )
 visible = false
 mesh = SubResource( 14 )
+skeleton = NodePath("")
 material/0 = SubResource( 15 )
 
 [node name="hit_effect" type="MeshInstance" parent="laser"]
@@ -407,12 +432,19 @@ visible = false
 mesh = SubResource( 16 )
 material/0 = SubResource( 17 )
 
-[node name="Particles" type="Particles" parent="laser/hit_effect"]
+[node name="Particles" type="CPUParticles" parent="laser/hit_effect"]
+emitting = false
 amount = 300
 lifetime = 0.6
 local_coords = false
-process_material = SubResource( 31 )
-draw_pass_1 = SubResource( 24 )
+mesh = SubResource( 24 )
+flag_align_y = true
+spread = 180.0
+initial_velocity = 7.0
+initial_velocity_random = 0.5
+scale_amount = 0.5
+scale_amount_curve = SubResource( 29 )
+color_ramp = SubResource( 27 )
 
 [node name="glow" type="MeshInstance" parent="laser"]
 transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, -4.001 )
